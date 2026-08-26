@@ -1,0 +1,31 @@
+{
+  "name": "Tip",
+  "type": "object",
+  "properties": {
+    "from_user": {
+      "type": "string",
+      "description": "Email of tipper"
+    },
+    "to_user": {
+      "type": "string",
+      "description": "Email of recipient"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Tip amount in USD"
+    },
+    "message": {
+      "type": "string",
+      "description": "Optional message with tip"
+    },
+    "room": {
+      "type": "string",
+      "description": "Which room the tip was sent from"
+    }
+  },
+  "required": [
+    "from_user",
+    "to_user",
+    "amount"
+  ]
+}

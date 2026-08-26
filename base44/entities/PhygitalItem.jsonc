@@ -1,0 +1,55 @@
+{
+  "name": "PhygitalItem",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Owner's email"
+    },
+    "item_name": {
+      "type": "string",
+      "description": "Name of phygital item"
+    },
+    "item_type": {
+      "type": "string",
+      "enum": [
+        "merch",
+        "vinyl",
+        "artwork",
+        "collectible",
+        "apparel"
+      ],
+      "description": "Type of physical item"
+    },
+    "nfc_id": {
+      "type": "string",
+      "description": "NFC chip ID for authentication"
+    },
+    "blockchain_hash": {
+      "type": "string",
+      "description": "On-chain certificate of authenticity"
+    },
+    "model_url": {
+      "type": "string",
+      "description": "3D model file URL"
+    },
+    "ar_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Enable AR try-on"
+    },
+    "display_position": {
+      "type": "object",
+      "description": "3D space position {x, y, z}"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional item data (size, color, edition)"
+    }
+  },
+  "required": [
+    "user_email",
+    "item_name",
+    "item_type"
+  ]
+}

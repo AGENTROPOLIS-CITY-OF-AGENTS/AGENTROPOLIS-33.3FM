@@ -1,0 +1,32 @@
+{
+  "name": "Purchase",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Purchaser email"
+    },
+    "item_id": {
+      "type": "string",
+      "description": "ID of purchased virtual item"
+    },
+    "item_name": {
+      "type": "string",
+      "description": "Name of item for reference"
+    },
+    "amount_paid": {
+      "type": "number",
+      "description": "Amount paid in USD"
+    },
+    "is_equipped": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether item is currently displayed"
+    }
+  },
+  "required": [
+    "user_email",
+    "item_id",
+    "amount_paid"
+  ]
+}

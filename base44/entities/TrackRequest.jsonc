@@ -1,0 +1,43 @@
+{
+  "name": "TrackRequest",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of user requesting track"
+    },
+    "track_name": {
+      "type": "string",
+      "description": "Name of requested track"
+    },
+    "tip_amount": {
+      "type": "number",
+      "default": 0,
+      "description": "Tip amount for priority"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "playing",
+        "played",
+        "skipped"
+      ],
+      "default": "pending",
+      "description": "Track status"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "high"
+      ],
+      "default": "normal",
+      "description": "Queue priority"
+    }
+  },
+  "required": [
+    "user_email",
+    "track_name"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "CommunityEvent",
+  "type": "object",
+  "properties": {
+    "artist_email": {
+      "type": "string",
+      "description": "Artist hosting the event"
+    },
+    "title": {
+      "type": "string",
+      "description": "Event title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Event description"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "live_broadcast",
+        "listening_party",
+        "meet_greet",
+        "workshop",
+        "concert"
+      ],
+      "description": "Type of event"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event start time"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Duration in minutes"
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of attendee emails"
+    },
+    "max_capacity": {
+      "type": "number",
+      "description": "Maximum number of attendees"
+    },
+    "inscription_hash": {
+      "type": "string",
+      "description": "Dogechain inscription hash for event proof"
+    }
+  },
+  "required": [
+    "artist_email",
+    "title",
+    "event_type",
+    "start_time"
+  ]
+}

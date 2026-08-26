@@ -1,0 +1,45 @@
+{
+  "name": "GestureSession",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Performer email"
+    },
+    "title": {
+      "type": "string",
+      "description": "Session name"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Session length"
+    },
+    "gesture_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Total gestures tracked"
+    },
+    "modes_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Modes activated during session"
+    },
+    "peak_density": {
+      "type": "number",
+      "description": "Max particle density achieved"
+    },
+    "preset_used": {
+      "type": "string",
+      "description": "Mapping preset ID"
+    },
+    "recording_url": {
+      "type": "string",
+      "description": "Optional: link to recorded output"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

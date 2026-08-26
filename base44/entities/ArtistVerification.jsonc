@@ -1,0 +1,39 @@
+{
+  "name": "ArtistVerification",
+  "type": "object",
+  "properties": {
+    "artist_email": {
+      "type": "string",
+      "description": "Artist email"
+    },
+    "blockchain_address": {
+      "type": "string",
+      "description": "Dogechain wallet address"
+    },
+    "inscription_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of music inscriptions"
+    },
+    "total_streams": {
+      "type": "number",
+      "default": 0
+    },
+    "total_followers": {
+      "type": "number",
+      "default": 0
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Blockchain verified artist"
+    },
+    "verification_hash": {
+      "type": "string",
+      "description": "Dogechain verification inscription"
+    }
+  },
+  "required": [
+    "artist_email"
+  ]
+}

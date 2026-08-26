@@ -1,0 +1,50 @@
+{
+  "name": "GestureEvent",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Parent session ID"
+    },
+    "hand": {
+      "type": "string",
+      "enum": [
+        "left",
+        "right"
+      ],
+      "description": "Which hand"
+    },
+    "gesture_type": {
+      "type": "string",
+      "enum": [
+        "open_palm",
+        "closed_fist",
+        "point",
+        "attract",
+        "scatter"
+      ],
+      "description": "Detected gesture"
+    },
+    "position_x": {
+      "type": "number",
+      "description": "Normalized X position"
+    },
+    "position_y": {
+      "type": "number",
+      "description": "Normalized Y position"
+    },
+    "velocity": {
+      "type": "number",
+      "description": "Movement velocity"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "session_id",
+    "hand",
+    "gesture_type"
+  ]
+}

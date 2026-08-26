@@ -1,0 +1,47 @@
+{
+  "name": "MappingPreset",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Preset owner"
+    },
+    "preset_name": {
+      "type": "string",
+      "description": "Name of this mapping preset"
+    },
+    "gesture_mappings": {
+      "type": "object",
+      "description": "Gesture to parameter mappings"
+    },
+    "scale_tuning": {
+      "type": "string",
+      "enum": [
+        "chromatic",
+        "pentatonic",
+        "major",
+        "minor",
+        "dorian"
+      ],
+      "default": "pentatonic",
+      "description": "Musical scale"
+    },
+    "effect_routing": {
+      "type": "object",
+      "description": "Audio effects configuration"
+    },
+    "particle_config": {
+      "type": "object",
+      "description": "Visual particle settings"
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": false,
+      "description": "Share with community"
+    }
+  },
+  "required": [
+    "user_email",
+    "preset_name"
+  ]
+}

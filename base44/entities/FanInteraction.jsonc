@@ -1,0 +1,47 @@
+{
+  "name": "FanInteraction",
+  "type": "object",
+  "properties": {
+    "fan_email": {
+      "type": "string",
+      "description": "Email of the fan"
+    },
+    "artist_email": {
+      "type": "string",
+      "description": "Email of the artist"
+    },
+    "interaction_type": {
+      "type": "string",
+      "enum": [
+        "comment",
+        "message",
+        "tip_sent",
+        "track_request"
+      ],
+      "description": "Type of interaction"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message or comment content"
+    },
+    "artist_response": {
+      "type": "string",
+      "description": "Artist's response to the interaction"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "responded",
+        "archived"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "fan_email",
+    "artist_email",
+    "interaction_type",
+    "content"
+  ]
+}

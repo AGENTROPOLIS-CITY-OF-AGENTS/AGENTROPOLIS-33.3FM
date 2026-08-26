@@ -1,0 +1,47 @@
+{
+  "name": "VirtualItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Item name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Item description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "decor",
+        "equipment",
+        "visual_effect",
+        "avatar"
+      ],
+      "description": "Item category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "model_data": {
+      "type": "object",
+      "description": "3D model properties (color, size, etc)"
+    },
+    "rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "rare",
+        "epic",
+        "legendary"
+      ],
+      "default": "common"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "price"
+  ]
+}

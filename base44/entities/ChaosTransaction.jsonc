@@ -1,0 +1,41 @@
+{
+  "name": "ChaosTransaction",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "purchase",
+        "spend",
+        "earn",
+        "transfer"
+      ],
+      "description": "Transaction type"
+    },
+    "amount": {
+      "type": "number",
+      "description": "CHAOS XP amount"
+    },
+    "usd_amount": {
+      "type": "number",
+      "description": "USD amount if applicable"
+    },
+    "description": {
+      "type": "string",
+      "description": "Transaction description"
+    },
+    "related_entity": {
+      "type": "string",
+      "description": "Related entity ID (track request, tip, etc)"
+    }
+  },
+  "required": [
+    "user_email",
+    "type",
+    "amount"
+  ]
+}

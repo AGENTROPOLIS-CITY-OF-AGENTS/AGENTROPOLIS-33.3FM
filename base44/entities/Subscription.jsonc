@@ -1,0 +1,45 @@
+{
+  "name": "Subscription",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the subscriber"
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "free",
+        "artist",
+        "broadcaster",
+        "vip"
+      ],
+      "default": "free",
+      "description": "Subscription tier level"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "cancelled",
+        "expired"
+      ],
+      "default": "active",
+      "description": "Subscription status"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When subscription expires"
+    },
+    "auto_renew": {
+      "type": "boolean",
+      "default": true,
+      "description": "Auto-renewal setting"
+    }
+  },
+  "required": [
+    "user_email",
+    "tier"
+  ]
+}

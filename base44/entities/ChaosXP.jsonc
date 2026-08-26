@@ -1,0 +1,28 @@
+{
+  "name": "ChaosXP",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email"
+    },
+    "balance": {
+      "type": "number",
+      "default": 0,
+      "description": "Current CHAOS XP balance"
+    },
+    "total_earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Total CHAOS XP earned all time"
+    },
+    "total_spent": {
+      "type": "number",
+      "default": 0,
+      "description": "Total CHAOS XP spent"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
