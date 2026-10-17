@@ -2,14 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./manifest.json" />
     <title>33.3 FM // RED FANG</title>
+    <style>
+      .redfang-portal {
+        position: fixed;
+        z-index: 80;
+        right: 16px;
+        bottom: 16px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #f3eee3;
+        background: #c41e3a;
+        border: 2px solid #0a0a0a;
+        padding: 10px 14px;
+        text-decoration: none;
+        box-shadow: 4px 4px 0 #0a0a0a;
+      }
+    </style>
   </head>
   <body>
-    <main style="font-family: system-ui, sans-serif; padding: 2rem;">
-      <h1>33.3 FM // RED FANG</h1>
-      <p>The alternative station that never died.</p>
-      <p><a href="/33-3fm-ad-portal.html">Open the RED FANG Ad Portal</a></p>
-    </main>
+    <div id="root"></div>
+    <a class="redfang-portal" href="33-3fm-ad-portal.html">Open the RED FANG Ad Portal</a>
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
