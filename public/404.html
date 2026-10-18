@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <title>33.3FM — Virtual Signal Studio</title>
   <script>
-    // GitHub Pages SPA redirect: store the path and redirect to index
+    // GitHub Pages SPA fallback for this project site.
+    // Unknown routes must return to /AGENTROPOLIS-33.3FM/, not the org root.
+    var base = '/AGENTROPOLIS-33.3FM/';
     var path = window.location.pathname;
     var query = window.location.search;
     var hash = window.location.hash;
-    var redirectUrl = window.location.origin + '/?p=' + encodeURIComponent(path + query) + hash;
+    var redirectUrl = window.location.origin + base + '?p=' + encodeURIComponent(path + query) + hash;
     window.location.replace(redirectUrl);
   </script>
 </head>
